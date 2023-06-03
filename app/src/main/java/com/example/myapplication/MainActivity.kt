@@ -10,5 +10,7 @@ class MainActivity : AppCompatActivity() {
         print("hello world")
         print("simran arora")
         print("simran arora")
+        print("gitinit")
     }
+
 }
