@@ -14,11 +14,11 @@ interface YogaDao {
     suspend fun insertData(data:LocalResponse):Long
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertDataList(data:List<LocalResponse>):Long
+    suspend fun insertDataList(data:List<LocalResponse>)
 
     @Query("Select * from yogaTable")
-    suspend fun getData():LiveData<List<LocalResponse>>
+    fun getData():LiveData<List<LocalResponse>>
 
     @Delete
-    suspend fun deleteData(data:LocalResponse):Long
+    suspend fun deleteData(data:LocalResponse):Int
 }

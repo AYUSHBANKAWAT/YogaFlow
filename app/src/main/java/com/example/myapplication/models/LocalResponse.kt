@@ -1,6 +1,7 @@
 package com.example.myapplication.models
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.example.myapplication.localData.DatabasePoint
 
 @Entity(tableName = DatabasePoint.table_Name)
@@ -11,6 +12,7 @@ data class LocalResponse(
 	val urlSvgAlt: String? = null,
 	val sanskritName: String? = null,
 	val urlPng: String? = null,
+	@PrimaryKey
 	val id: Int? = null,
 	val poseBenefits: String? = null,
 	val translationName: String? = null,
